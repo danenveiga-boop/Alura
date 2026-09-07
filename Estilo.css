@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+}
+
+.cabeçalho {
+    padding: 15px 25px;
+    background-color: #173f5f;
+    color: white;
+}
+
+.cabeçalho a {
+    color: white;
+}
+
+main h2 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Área completa do flashcard */
+.cartao {
+    width: 300px;
+    height: 260px;
+    margin: 30px auto;
+    perspective: 1000px;
+}
+
+/* Parte responsável pelo movimento */
+.cartao-interno {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Faz o cartão virar */
+.cartao:hover .cartao-interno {
+    transform: rotateY(180deg);
+}
+
+/* Configuração da frente e do verso */
+.cartao-frente,
+.cartao-verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    background-color: white;
+}
+
+/* Deixa o verso inicialmente virado */
+.cartao-verso {
+    transform: rotateY(180deg);
+    background-color: #d8f3dc;
+}
+
+/* Ajusta a imagem dentro do cartão */
+.cartao-imagem {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    display: block;
+    background-color: #dcecf5;
+}
+
+.cartao {
+    width: 300px;
+    height: 260px;
+    margin: 30px auto;
+    perspective: 1000px;
+}
+.cartao-frente p,
+.cartao-verso p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    margin: 0;
+    padding: 0 12px;
+    text-align: center;
+}
+
+.cartao-frente p {
+    font-weight: bold;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
