@@ -1,168 +1,153 @@
+# @title
+%%html
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-<meta charset="UTF-8">
 
 <style>
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  text-align: center;
-  margin: 0;
-  padding: 20px;
-}
-
-.cabecalho {
-  max-width: 500px;
-  margin: auto;
-  background: #222;
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #1e293b;
+    text-align: center;
 }
 
 h1 {
-  margin: 0;
-  font-size: 34px;
-}
-
-h2 {
-  font-size: 22px;
-  margin: 25px 0;
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .cartao {
-  width: 340px;
-  height: 410px;
-  margin: 0 auto;
-  perspective: 1000px;
-  cursor: pointer;
+    width: 350px;
+    height: 430px;
+    margin: 30px auto;
+    perspective: 1000px;
+    cursor: pointer;
 }
 
 .cartao-interno {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: transform 0.7s;
-  transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
 }
 
 .cartao.virado .cartao-interno {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
-.cartao-frente,
-.cartao-verso {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+.frente,
+.verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
 }
 
-.cartao-frente {
-  background: white;
-  color: #222;
+.frente {
+    background: #dbeafe;
+    color: #222;
 }
 
-.cartao-verso {
-  background: #222;
-  color: white;
-  transform: rotateY(180deg);
+.verso {
+    background: #222;
+    color: white;
+    transform: rotateY(180deg);
 }
 
-.cartao-imagem {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
+img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
 }
 
-.cartao p {
-  font-size: 19px;
-  line-height: 1.35;
-  padding: 12px 18px;
+p {
+    padding: 15px;
+    font-size: 20px;
 }
 
-.cartao-verso strong {
-  color: #ff5252;
-  font-size: 25px;
+.verso strong {
+    color: #ff5252;
+    font-size: 26px;
 }
 
 .dica {
-  margin-top: 15px;
-  font-weight: bold;
-  color: #555;
-}
-
-footer {
-  margin-top: 25px;
-  color: #555;
+    font-weight: bold;
+    color: #555;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header class="cabecalho">
-  <h1>Confere Aí</h1>
-</header>
+<h1>CONFERE AÍ</h1>
 
-<main>
+<h2>Mito ou verdade?</h2>
 
-  <h2>Mito ou verdade?</h2>
+<div class="cartao"
+onclick="this.classList.toggle('virado')">
 
-  <article class="cartao" onclick="this.classList.toggle('virado')">
+<div class="cartao-interno">
 
-    <div class="cartao-interno">
+<div class="frente">
 
-      <div class="cartao-frente">
+<img
+src="https://checamos.afp.com/sites/default/files/medias/factchecking/g2/2026-09/350ac4da5b326fde9c57407dbd9cbcf2-pt-br.jpeg">
 
-        <img
-          src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&amp;h=2849"
-          alt="Pinguins"
-          class="cartao-imagem"
-        >
+<p>
 
-        <p>
-          Mito ou verdade:<br>
-          <strong>TÍTULO DA PERGUNTA AQUI</strong>
-        </p>
+Mito ou verdade?
 
-      </div>
+<br><br>
 
-      <div class="cartao-verso">
+<strong>
+Manifestação pró-Lula no Rock in Rio 2026
+</strong>
 
-        <img
-          src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&amp;h=2849"
-          alt="Pinguins"
-          class="cartao-imagem"
-        >
+</p>
 
-        <p>
-          <strong>Mito!</strong><br>
-          TÍTULO DA MENTIRA AQUI
-        </p>
+</div>
 
-      </div>
 
-    </div>
+<div class="verso">
 
-  </article>
+<img
+src="https://checamos.afp.com/sites/default/files/medias/factchecking/g2/2026-09/350ac4da5b326fde9c57407dbd9cbcf2-pt-br.jpeg">
 
-  <p class="dica">
-    👆 Clique no cartão para virar
-  </p>
+<p>
 
-</main>
+<strong>MITO!</strong>
 
-<footer>
-  Projeto feito por SEU NOME AQUI
-</footer>
+<br><br>
+
+É de 2022 vídeo em que pessoas manifestam apoio a Lula no Rock in Rio
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<p class="dica">
+Clique no cartão para virar.
+</p>
+
+<p>
+Projeto feito por Janaina
+</p>
 
 </body>
+
 </html>
